@@ -1,1 +1,19 @@
+Floyd's algorithm, also known as the Floyd-Warshall algorithm, is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. It works for both directed and undirected graphs and is particularly useful in graphs with negative weights, though it assumes no negative cycles (cycles with a total negative weight).
+
+Key Characteristics of Floyd-Warshall Algorithm
+Input: A graph represented by an adjacency matrix, where the entry at index 
+(i,j) represents the weight of the edge from vertex 
+j. If no edge exists, the weight is typically set to infinity (
+
+Output: A matrix where each entry 
+(i,j) contains the shortest distance from vertex 
+Time Complexity: 
+O(V^3), where V is the number of vertices in the graph.
+How Floyd-Warshall Algorithm Works
+The algorithm iteratively improves the distance estimates by allowing paths that pass through an intermediate vertex 
+k. At each step, it checks if including the vertex k in the path between vertices i and j offers a shorter path than the previously known shortest path.
+
+The algorithm updates the distance matrix as follows:
+
+
 
