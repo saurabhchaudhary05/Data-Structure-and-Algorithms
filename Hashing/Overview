@@ -1,1 +1,40 @@
+Hashing is a technique used in data structures and algorithms to enable fast data retrieval. It is commonly used in hash tables, databases, and cryptography. Hashing converts data (like strings or numbers) into a fixed-size numerical value, known as a "hash value" or "hash code," using a hash function. This hash value is then used as an index in an array, which allows for rapid access to the data. Here’s an overview of key aspects of hashing:
 
+1. Hash Function
+A hash function is a mathematical function that takes input data (like a key) and produces a hash value, typically an integer. The function maps keys to indices in a hash table where the actual data or values are stored.
+A good hash function should minimize collisions, distribute data uniformly, and be efficient to compute.
+2. Hash Table
+A hash table is a data structure that uses hashing to organize and store data. It consists of an array, where each index represents a slot where data can be stored.
+Keys are passed through a hash function, and the resulting hash value points to the index in the hash table where the corresponding data is stored.
+3. Collisions
+A collision occurs when two keys produce the same hash value and try to occupy the same slot in the hash table.
+Handling collisions is crucial for an effective hash table, as it can affect the time complexity of data retrieval.
+4. Collision Resolution Techniques
+Separate Chaining: Each slot in the hash table contains a linked list of elements. If multiple keys map to the same slot, they’re stored in a linked list at that slot.
+Open Addressing: If a slot is occupied, the algorithm searches for the next available slot based on a probing sequence. Common techniques include:
+Linear Probing: Check the next slot sequentially.
+Quadratic Probing: Use a quadratic function to determine the next slot.
+Double Hashing: Use a secondary hash function to determine the probe sequence.
+5. Load Factor
+The load factor is the ratio of the number of elements in the hash table to the total number of slots. A high load factor increases the chances of collisions.
+Hash tables often resize (expand or shrink) based on the load factor to maintain efficiency.
+6. Time Complexity
+Average Case: Hash tables provide an average-case time complexity of 
+𝑂
+(
+1
+)
+O(1) for insert, delete, and search operations.
+Worst Case: If many collisions occur (for instance, with a poor hash function), the time complexity can degrade to 
+𝑂
+(
+𝑛
+)
+O(n), where 
+𝑛
+n is the number of elements.
+7. Applications of Hashing
+Data Storage: Hash tables are widely used in databases, caches, and dictionaries due to their fast access times.
+Cryptography: Hash functions are essential for cryptographic algorithms and data integrity checks.
+Symbol Tables: Compilers use hash tables to store variable and function names for fast retrieval.
+In summary, hashing is a powerful technique for managing and retrieving data efficiently, and its effectiveness depends heavily on the choice of hash function and collision resolution method.
