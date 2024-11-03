@@ -1,1 +1,16 @@
+Warshall's algorithm, also known as the transitive closure algorithm, is an algorithm used to find the transitive closure of a directed graph. It is applied to determine the reachability of vertices, meaning it finds out whether there exists a path between any two vertices in a graph. Warshall’s algorithm is specifically useful for determining which vertices are reachable from each other in a directed graph.
 
+Key Characteristics of Warshall's Algorithm
+Input: A directed graph represented by an adjacency matrix, where the entry at index (i,j) is:
+1 if there is a direct edge from vertex i to vertex 0 otherwise.
+Output: A transitive closure matrix, which is also a matrix of the same dimension. An entry at 
+(i,j) is:
+1 if there exists a path from vertex i to vertex j (direct or indirect),0 if there is no path from vertex i to vertex j.
+Time Complexity: 
+O(V^3), where 
+V is the number of vertices in the graph.
+
+How Warshall's Algorithm Works
+The algorithm systematically checks each pair of vertices to see if a new path can be created between them by including an intermediate vertex 
+𝑘. For each pair (i,j), if there is a path from i to 𝑘 and a path from k to j, then a path exists from 
+i to j, and the transitive closure is updated.
